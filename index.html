@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TwitterDash</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo desktop-only">
+          <img src="./img/twitter.png" alt="" />
+          <span>TwitterDash</span>
+        </div>
+        <div class="logo mobile-only" id="logo-mobile">
+          <img src="./img/twitter.png" alt="" />
+          <span>TwitterDash</span>
+        </div>
+
+        <form id="search-form">
+          <div class="searchbar desktop-only">
+            <span class="material-symbols-outlined search-icon">search</span>
+            <input
+              name="search"
+              id="search-desktop"
+              type="text"
+              placeholder="Search user"
+              aria-label="search"
+            />
+          </div>
+
+          <button type="submit" style="display: none"></button>
+
+          <button
+            type="button"
+            class="mobile-only searchbutton button"
+            id="searchbutton"
+          >
+            <span class="material-symbols-outlined">search</span>
+          </button>
+          <div class="searchbar-mobile mobile-only" id="searchbar-mobile">
+            <div class="searchbar">
+              <span class="material-symbols-outlined search-icon">search</span>
+              <input
+                name="search"
+                type="text"
+                placeholder="Search user"
+                aria-label="search"
+                id="search-mobile"
+              />
+              <span
+                class="material-symbols-outlined search-close"
+                id="close-btn"
+                >close</span
+              >
+            </div>
+          </div>
+        </form>
+      </nav>
+
+      <main>
+        <div class="left-section">
+          <div class="user-list" id="user-list">
+            <p class="loading">Loading...</p>
+          </div>
+          <div class="pagination">
+            <button class="button" id="prev-btn" disabled>Prev</button>
+            <span id="pagination-notice">
+              Showing 1-10<br />from 100 results
+            </span>
+            <button class="button" id="next-btn">Next</button>
+          </div>
+        </div>
+        <div class="right-section" id="right-section">
+          <div class="no-data-container">
+            <span>You can see User's detail and their posts here</span>
+            <p>Click on any users in the left list to see their details</p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
